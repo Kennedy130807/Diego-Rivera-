@@ -3,42 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registro exitoso</title>
+  <title>Registro Exitoso</title>
   <style>
+    :root {
+      --azul: #007acc;
+      --azul-hover: #005c99;
+      --fondo: #eef2f5;
+      --blanco: #ffffff;
+      --sombra: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #eef2f5;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
     }
 
     .mensaje {
-      background-color: white;
-      padding: 3rem;
+      background-color: var(--blanco);
+      padding: 3rem 2rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--sombra);
       text-align: center;
+      max-width: 500px;
+      width: 90%;
     }
 
     h1 {
-      color: #007acc;
+      color: var(--azul);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 2rem;
     }
 
     a {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #007acc;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--azul);
       color: white;
       text-decoration: none;
       border-radius: 0.5rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
     }
 
     a:hover {
-      background-color: #005c99;
+      background-color: var(--azul-hover);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
     }
   </style>
 </head>
@@ -46,10 +78,12 @@
   <div class="mensaje">
     <h1>¡Registro exitoso!</h1>
     <p>Tu solicitud ha sido enviada correctamente. Gracias por registrarte.</p>
-    <a href="Index.html">Volver a la página principal</a>
+    <a href="index.html">Volver a la página principal</a>
   </div>
+
   <footer>
-  <p>© 2025 Escuela Primaria Diego Rivera - San Vicente Chicoloapan</p>
-</footer>
+    <p>© 2025 Escuela Primaria Diego Rivera - San Vicente Chicoloapan</p>
+  </footer>
 </body>
 </html>
+
