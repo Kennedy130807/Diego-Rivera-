@@ -5,57 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registro de Nuevo Ingreso</title>
   <style>
+    :root {
+      --azul: #007acc;
+      --azul-hover: #005c99;
+      --fondo: #eef2f5;
+      --blanco: #ffffff;
+      --sombra: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #eef2f5;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo);
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .form-container {
-      background-color: white;
+      background-color: var(--blanco);
       max-width: 600px;
-      margin: auto;
-      padding: 2rem;
+      width: 100%;
+      padding: 2.5rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--sombra);
+      margin-bottom: 2rem;
     }
 
     h1 {
       text-align: center;
-      color: #007acc;
+      color: var(--azul);
       margin-bottom: 2rem;
+      font-size: 1.8rem;
     }
 
     label {
       display: block;
       margin-top: 1rem;
-      font-weight: bold;
+      font-weight: 600;
       color: #333;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.7rem;
-      margin-top: 0.3rem;
+      padding: 0.75rem;
+      margin-top: 0.4rem;
       border: 1px solid #ccc;
       border-radius: 0.5rem;
-      box-sizing: border-box;
+      font-size: 1rem;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--azul);
+      outline: none;
     }
 
     button {
-      background-color: #007acc;
+      background-color: var(--azul);
       color: white;
-      padding: 0.8rem 1.2rem;
+      padding: 0.9rem 1.2rem;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.6rem;
       margin-top: 2rem;
       cursor: pointer;
       width: 100%;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #005c99;
+      background-color: var(--azul-hover);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
@@ -64,7 +97,7 @@
   <div class="form-container">
     <h1>Registro de Nuevo Ingreso</h1>
 
-   <form action="confirmacion.html" method="GET">
+    <form action="confirmacion.html" method="GET">
       <label for="nombre">Nombre del alumno:</label>
       <input type="text" id="nombre" name="nombre" required>
 
@@ -97,15 +130,13 @@
       <label for="comentarios">Comentarios adicionales (opcional):</label>
       <textarea id="comentarios" name="comentarios" rows="4"></textarea>
 
-   
-  <!-- ...todos los campos aquí... -->
-  <button type="submit">Enviar solicitud</button>
-</form>
+      <button type="submit">Enviar solicitud</button>
     </form>
   </div>
+
   <footer>
-  <p>© 2025 Escuela Primaria Diego Rivera - San Vicente Chicoloapan</p>
-</footer>
+    <p>© 2025 Escuela Primaria Diego Rivera - San Vicente Chicoloapan</p>
+  </footer>
 
 </body>
 </html>
